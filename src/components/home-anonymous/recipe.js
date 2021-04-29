@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Reviews =() =>{
+const Recipe=() =>{
     return(
         <div className=" mx-auto col-md-6 mb-4">
 
@@ -9,7 +9,7 @@ const Reviews =() =>{
 
 
                 <div className="view overlay">
-                    {<img className="card-img-top" src="https://picsum.photos/id/192/1250/500"/>}
+                    {<img className="card-img-top" src="https://picsum.photos/id/429/1250/500"/>}
                     <a href="#">
                         <div className="mask rgba-white-slight"></div>
                     </a>
@@ -17,11 +17,11 @@ const Reviews =() =>{
 
                 <div className="card-body">
 
-                    <h4 className="card-title">Success Stories</h4>
+                    <h4 className="card-title">Recipe</h4>
 
-                    <p className="card-text">Get motivated and learn from various successful stories!</p>
+                    <p className="card-text">Get access to various diet plans and recipes videos</p>
 
-                    <a href="#" className="btn btn-primary">Know more</a>
+                    <a href="/search/" className="btn btn-secondary">Know more</a>
 
                 </div>
 
@@ -32,4 +32,4 @@ const Reviews =() =>{
     )
 
 }
-export default Reviews
+export default Recipe

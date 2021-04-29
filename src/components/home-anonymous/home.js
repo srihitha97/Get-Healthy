@@ -1,9 +1,9 @@
 import React from 'react'
 import Calories from "./calories";
 import Coaching from "./coaching";
-import Reviews from "./reviews";
-import Workout from "./workout-videos";
-
+import FooterPage from "./footer";
+import Recipe from "./recipe";
+import Navbar from "./navbar";
 import {Link} from "react-router-dom";
 import UserStories from "./user-stories";
 
@@ -14,92 +14,94 @@ export default class Home extends React.Component {
         this.state = {
             CaloriesRender: true,
             CoachingRender: false,
-            ReviewsRender :false,
-            WorkoutRender :false
+
+            RecipeRender: false
         }
         this.CountCalories = this.CountCalories.bind(this);
-        this.PersonalCoaching =this.PersonalCoaching.bind(this);
-        this.Reviews =this.Reviews.bind(this);
-        this.WorkoutVideos =this.WorkoutVideos.bind(this);
+        this.PersonalCoaching = this.PersonalCoaching.bind(this);
+
+        this.Recipe = this.Recipe.bind(this);
     }
 
     CountCalories = () => {
         this.setState({CoachingRender: false});
-        this.setState({WorkoutRender: false});
-        this.setState({ReviewsRender: false});
-        this.setState({CaloriesRender:true});
-    }
-PersonalCoaching =() => {
-    this.setState({CaloriesRender: false});
-    this.setState({WorkoutRender: false});
-    this.setState({ReviewsRender: false});
-        this.setState({CoachingRender:true});
-}
-Reviews =() =>{
-    this.setState({CaloriesRender: false});
-    this.setState({CoachingRender: false});
-    this.setState({WorkoutRender: false});
-    this.setState({ReviewsRender:true});
-}
+        this.setState({RecipeRender: false});
 
-WorkoutVideos =() => {
-    this.setState({CaloriesRender: false});
-    this.setState({CoachingRender: false});
-    this.setState({ReviewsRender: false});
-    this.setState({WorkoutRender:!this.state.WorkoutRender});
-}
+        this.setState({CaloriesRender: true});
+    }
+    PersonalCoaching = () => {
+        this.setState({CaloriesRender: false});
+        this.setState({RecipeRender: false});
+
+        this.setState({CoachingRender: true});
+    }
+    Reviews = () => {
+        this.setState({CaloriesRender: false});
+        this.setState({CoachingRender: false});
+        this.setState({RecipeRender: false});
+
+    }
+
+    Recipe = () => {
+        this.setState({CaloriesRender: false});
+        this.setState({CoachingRender: false});
+
+        this.setState({RecipeRender: !this.state.RecipeRender});
+    }
+
     render() {
         return (
             <>
                 <div>
-                    <nav className="  p-3 navbar navbar-light" style={{backgroundColor: "#98c0d6"}}>
 
-                        <a className="navbar-brand" href="#">
-                            <i className="fa fa-heartbeat fa-2x"></i>
-                            <span>GetHealthy</span>
-                        </a>
-                        <div className="float-right">
-                            <button> <a href= "/sign-up">
-                            Sign up</a></button>
-                            <br/>
-
-                            <button> <a href = "/login">
-                                Sign in</a></button>
-
-                        </div>
-                        {<img className="container-fluid" src="https://picsum.photos/id/429/1250/500"/>}
-                    </nav>
-
-                    <h1 className=" m-3 p-3 text-center">Here's how we work</h1>
+                    <Navbar/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    {<img className="container-fluid" src="https://picsum.photos/id/1060/1250/500"/>}
+                    <br/>
+                    <br/>
+                    <br/>
                     <div className="text-center">
 
-                        <button onClick={this.CountCalories} className=" m-3 p-3 fas fa-utensils"></button>
+                        <h1 className="  text-center">Here's How We Work</h1>
 
-                        <button onClick={this.PersonalCoaching} className=" m-3 p-3 fas fa-user"></button>
-                        <button onClick={this.Reviews} className=" m-3 p-3 fas fa-comments"></button>
-                        <button  onClick={this.WorkoutVideos}  className="m-3 p-3 fas fa-clipboard"></button>
+                        <button onClick={this.CountCalories} className=" m-3 p-3 fas fa-utensils">Calorie counting
+                        </button>
+
+                        <button onClick={this.PersonalCoaching} className=" m-3 p-3 fas fa-user">Personal Coaching
+                        </button>
+
+                        <button onClick={this.Recipe} className="m-3 p-3 fas fa-clipboard"> Recipes</button>
                         {this.state.CaloriesRender && <Calories/>}
                         {this.state.CoachingRender && <Coaching/>}
-                        {this.state.ReviewsRender && <Reviews/>}
-                        {this.state.WorkoutRender && <Workout/>}
+
+                        {this.state.RecipeRender && <Recipe/>}
 
 
                     </div>
                     <div className="m-3 p-3 text-center">
-<div >
-   <h1> GetHealthy delivers results</h1>
-    <p>Fromm weight loss to reversing lifestyle conditions, GetHealthy has transformed over millions of lives.</p>
-</div>
-<div>
-   <h1> Our Success stories</h1>
 
-    <p>Dynamic content of users stories goes herex</p>
-    <UserStories/>
+                        <div>
+                            <br/>
+                            <h1 className=" pb-3 mb-3"> Our Success Stories</h1>
+
+                            <UserStories/>
+                            <br/>
+
+                            <h4><Link to="/users">
+                                <button className={"btn btn-dark text-white"}>View all our Users and trainers</button>
+                            </Link></h4>
 
 
-</div>
+                        </div>
+
                     </div>
+
                 </div>
+                <FooterPage/>
 
             </>
         )

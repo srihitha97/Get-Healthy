@@ -1,9 +1,10 @@
 import React  from 'react'
-import UserCard from "./User_card";
+import AllUserCard from "./alluser_card";
 import {Link} from "react-router-dom";
 
 
-const UserGrid =({users})=>{
+
+const AllUserGrid =({users})=>{
     let count =users.length;
 
     return(
@@ -14,8 +15,8 @@ const UserGrid =({users})=>{
 
                 {
 
-                    users.slice(count-3,count).map( user =>
-                        <UserCard
+                    users.map( user =>
+                        <AllUserCard
                             key={user._id}
 
                             user={user}
@@ -26,4 +27,4 @@ const UserGrid =({users})=>{
         </div>
     )
 }
-export default UserGrid
+export default AllUserGrid

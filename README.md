@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Get-Healthy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project description [P1] document link- https://docs.google.com/document/d/1xTqV9qh35fCEJ4gg3M-iZIaoQfSQQW5hup4dNkwTb2Y/edit?usp=sharing
 
-## Available Scripts
+Project prototype [P2] document link- https://docs.google.com/document/d/1KE-3w966_GXX-P2UbDNyHnm0gpOhKXui8_DAZ3Qm-lI/edit
 
-In the project directory, you can run:
+## Problem Statement
 
-### `npm start`
+Diet and fitness related diseases are growing to epidemic proportions. Most part of the problem comes from a lack of awareness of what people are eating and how much energy they burn everyday.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Types of users
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1) End users
+2) Trainers
 
-### `npm test`
+## Goals of the users
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Admin:
 
-### `npm run build`
+· Manages the other user accounts that have been mentioned above - like the ability to delete/modify the account/profile of a given user.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+· Manages the other user's success stories - like the ability to delete a given user's success story.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### End users:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+· Can track calorie intake by logging in daily diet
 
-### `npm run eject`
+· Can see various food Recipes
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+· Can post their success stories
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+· Can view other user's success stories and Trainer stories
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Fitness trainers :
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+· Can view activity, profile of their respective trainees
 
-## Learn More
+· Can post their story 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+· Can feedback to assigned Trainees
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Overall Strategy
 
-### Code Splitting
+Get-Healthy helps measure:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+· Nutrition level and calorie intake by logging in daily diet
 
-### Analyzing the Bundle Size
+· Connects users with a team of fitness trainers who allow the users to create perfect diet and workout plans suited to tastes and activity levels through constant feedback
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Web API
 
-### Making a Progressive Web App
+· Calories
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+· Recipes
 
-### Advanced Configuration
+## UML Diagram
+<img width="373" alt="umld" src="https://user-images.githubusercontent.com/36701923/115153519-6a812180-a044-11eb-8419-a04251062649.PNG">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

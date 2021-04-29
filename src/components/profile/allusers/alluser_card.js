@@ -1,6 +1,6 @@
 import React ,{useState} from 'react';
 import {Link} from "react-router-dom";
-const UserCard = (
+const AllUserCard = (
     {
         user,
     }) => {
@@ -11,14 +11,21 @@ const UserCard = (
                 {<img className="card-img-top" src="https://picsum.photos/300/200" />}
                 <div className="card-body" >
                     <h5 className="card-title">
+
+                      <div> <a href={`/profile/${user._id}`}>
                         <h3>{user.name}</h3>
+                        </a>
+                      </div>
                     </h5>
-                    <p className="card-text">{user.about}</p>
-                   <p><b>Weight:</b> {user.weightInKgs}kg</p>
-                    <p><b>Height: </b>{user.heightInCms}cm</p>
+
+
+
 
                 </div>
+
             </div>
+            <br/>
+
         </div>
     )}
-export default UserCard
+export default AllUserCard
